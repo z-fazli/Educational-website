@@ -1,0 +1,746 @@
+:root {
+  --primary-color: #286bb8;
+  --body-bg-color: #d6e3f4;
+  --nav-menu-color: #eaf0f7;
+  --dark-blue-color: #060697;
+  --gray-text-color: #252525;
+}
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; /* 62.5%=10px */
+  scroll-behavior: smooth;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+body {
+  line-height: 1.6;
+  font-family: "Vazir-Medium";
+  font-size: 1.6rem;
+  background-color: var(--body-bg-color);
+  position: relative;
+}
+.arrow-up__icon {
+  position: sticky;
+  width: 5rem;
+  height: 5rem;
+  background-color: #fff;
+  border-radius: 1rem;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  top: 40rem;
+  right: 10rem; 
+  cursor: pointer;
+  padding: 1rem;
+  z-index: 1000;
+  box-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.5);
+ 
+}
+
+
+/*  ... Header... */
+
+.btn {
+  display: block;
+  border-radius: 5rem;
+  background-color: var(--primary-color);
+  color: var(--nav-menu-color);
+  width: 20rem;
+  height: 4rem;
+  cursor: pointer;
+  font-family: "Vazir-Medium";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0.3rem 1rem rgba(0, 0, 0, 0.3);
+}
+
+/* ...Reset Styles...  */
+a {
+  text-decoration: none !important;
+}
+/*  ...Navbaar... */
+
+.navbar {
+  width: 96%;
+  height: 5rem;
+  background: var(--primary-color);
+  position: fixed;
+  top: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 5rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
+  z-index: 1000;
+  transition: 0.2s;
+}
+/* ...Logo...  */
+.logo-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.site__logo-menu {
+  margin-right: 2rem;
+  display: none;
+  height: 4.5rem;
+  width: 4.5rem;
+}
+.site__logo-menu-image {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.site__logo-btn {
+  display: block;
+  height: 4.5rem;
+  width: 4.5rem;
+}
+.site-logo__image {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+/* ...Main Menu...  */
+
+.menu {
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+.menu__item {
+  margin-right: 2rem;
+}
+
+.menu__link {
+  color: var(--nav-menu-color);
+}
+.active {
+  color: black;
+}
+.menu__link:hover {
+  color: black;
+}
+.nav__menu {
+  position: fixed;
+  background-color: var(--nav-menu-color);
+  top: 5rem;
+  right: -30rem;
+  height: 100vh;
+  width: 23rem;
+  border-radius: 2rem;
+  padding: 2.5rem;
+  transition: all 250ms ease-in-out;
+  z-index: 100;
+}
+.nav__menu--open {
+  right: 0;
+}
+
+/* ...Mobile Menu...  */
+
+.mobile-menu {
+}
+.mobile-menu__item {
+  margin-bottom: 2rem;
+}
+.mobile-menu__link {
+  color: black;
+}
+.mobile-menu__link:hover {
+  color: blue;
+  transition: color 100ms ease-in;
+}
+.actived {
+  color: blue;
+  transition: color 100ms ease-in;
+}
+
+.nav-menu__links {
+  margin-top: 15rem;
+}
+.nav-menu__link {
+  color: black;
+  display: block;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border-radius: 5rem;
+  text-align: center;
+  background-color: var(--primary-color);
+  border: solid 2px var(--primary-color);
+}
+.nav-menu__link:hover {
+  background-color: rgb(25, 25, 223);
+  transition: color 100ms ease-in;
+}
+
+.nav-menu__link--border {
+  border: solid 2px var(--primary-color);
+  background-color: rgba(255, 255, 255, 1);
+}
+.nav-menu__link--border:hover {
+  background-color: rgba(255, 255, 255, 1);
+  border: solid 2px blue;
+  color: blue;
+  transition: color 100ms ease-in;
+}
+.navbar__links {
+  display: none;
+  margin-left: 2rem;
+  background-color: var(--nav-menu-color);
+  border: 1px solid var(--nav-menu-color);
+  padding: 0.2rem 1.5rem;
+  border-radius: 5rem;
+}
+
+.navbar__link:hover {
+  color: black;
+  transition: color 100ms ease-in;
+  font-size: 1.8rem;
+}
+.navbar__link {
+}
+
+/* ...Hamberger Menu...  */
+
+.nav__btn {
+  position: relative;
+  right: 0;
+  width: 4.5rem;
+  height: 4.5rem;
+  background-color: var(--primary-color);
+  border-radius: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.nav__btn-line {
+  display: block;
+  width: 3rem;
+  height: 0.2rem;
+  background-color: black;
+  border-radius: 1rem;
+  position: relative;
+  transition: all 150ms ease-in-out;
+}
+.nav__btn-line::after,
+.nav__btn-line::before {
+  display: block;
+  position: absolute;
+  content: " ";
+  width: 3rem;
+  height: 0.3rem;
+  background-color: black;
+  border-radius: 2rem;
+  transition: all 200ms ease-in-out;
+}
+.nav__btn-line::after {
+  top: 1rem;
+}
+.nav__btn-line::before {
+  top: -1rem;
+}
+.nav__btn--open .nav__btn-line {
+  background-color: transparent;
+}
+.nav__btn--open .nav__btn-line::before {
+  transform: translateY(10px) rotate(48deg);
+}
+.nav__btn--open .nav__btn-line::after {
+  transform: translateY(-10px) rotate(-48deg);
+}
+
+/*  ... Header... */
+
+.header {
+  position: relative;
+  top: 8rem;
+  min-height: 75vh;
+  background: linear-gradient(
+      rgba(173, 209, 245, 0.8),
+      rgba(214, 227, 244, 0.8)
+    ),
+    url(../Images/svg/header-bg-image.jpg) no-repeat;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  z-index: 0;
+}
+/*  ... Header Content... */
+.header-content {
+  text-align: center;
+}
+
+.header-content__title {
+  font-family: "Vazir-Bold";
+  font-size: 5rem;
+  margin: 6rem auto;
+  text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.3);
+}
+
+.header-conetnt__caption {
+  text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.3);
+  font-size: 2rem;
+}
+.header-content__link {
+  margin-top: 7rem;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 2rem;
+}
+.header-content__link:hover {
+  color: black;
+  background-color: var(--primary-color);
+  font-size: 2.7rem;
+}
+
+/*  ... Header-box__container... */
+
+.main {
+}
+
+.header-box__container {
+  position: relative;
+  height: 30rem;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-top: -5rem;
+  margin-left: auto;
+  margin-right: auto;
+  z-index: 1;
+}
+.header-box {
+  height: 25rem;
+  width: 30rem;
+  background: #fff;
+  text-align: center;
+  border-radius: 2rem;
+  box-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.5);
+  margin: 2rem;
+  cursor: pointer;
+}
+.header-box__logo-wrapper {
+  width: 6rem;
+  height: 6rem;
+  border-radius: 50%;
+  background-color: var(--primary-color);
+  margin: 2rem auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.header-box__logo-img {
+  display: block;
+  height: 3.5rem;
+  width: 3.5rem;
+  text-align: center;
+}
+.header-box__title {
+  font-size: 2.6rem;
+  color: var(--dark-blue-color);
+  margin-bottom: 2rem;
+}
+.header-box__title:hover {
+  font-size: 3rem;
+}
+
+/* ...About Us...  */
+
+.aboutUs {
+  background-color: var(--body-bg-color);
+  margin: 25rem 0;
+  width: 100%;
+  z-index: -1;
+  position: relative;
+}
+.aboutUs-mainTitle {
+  font-size: 5rem;
+  color: var(--dark-blue-color);
+  font-family: "Vazir-Bold";
+  text-align: center;
+}
+.aboutUs-mainCaption {
+  font-size: 3rem;
+  font-family: "Vazir-Medium";
+  text-align: center;
+}
+.aboutUs-Wrapper {
+  position: relative;
+  margin-top: 15rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.aboutUs-description {
+  position: relative;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-basis: 50%;
+  padding: 1rem;
+}
+.aboutUs-subTitle {
+  font-size: 3rem;
+  color: var(--dark-blue-color);
+  font-family: "Vazir-Bold";
+}
+.aboutUs-subCaption {
+  font-size: 2rem;
+  font-family: "Vazir-Medium";
+  text-align: center;
+  padding: 3rem 1rem;
+  color: var(--gray-text-color);
+  text-align: right;
+  margin-bottom: 2rem;
+}
+.about-us__btn {
+  font-size: 2rem;
+}
+.about-us__btn:hover {
+  color: black;
+  background-color: var(--primary-color);
+  font-size: 2.7rem;
+}
+.aboutUs-banner {
+  background-color: transparent;
+  position: relative;
+  height: 50vh;
+  width: 40vw;
+  left: 0;
+}
+.aboutUs-image {
+  background-color: transparent;
+  display: block;
+  width: 100%;
+  border-radius: 1rem;
+  /* box-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.5); */
+  margin-left: 2rem;
+  z-index: -1;
+}
+
+/* ...Teachers...  */
+
+.teachers {
+  position: relative;
+  z-index: -1;
+}
+.teachers-title {
+  font-size: 5rem;
+  color: var(--dark-blue-color);
+  font-family: "Vazir-Bold";
+  text-align: center;
+}
+.teachers-caption {
+  font-size: 3rem;
+  font-family: "Vazir-Medium";
+  text-align: center;
+  margin-bottom: 5rem;
+}
+.teachers-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.teachers-box {
+  height: 40rem;
+  width: 28rem;
+  background: #fff;
+  text-align: center;
+  border-radius: 2rem;
+  box-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.5);
+  margin: 2rem;
+  cursor: pointer;
+  padding: 1rem;
+}
+.teachers-picture {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  object-fit: cover;
+}
+.teacher-img {
+  display: block;
+  height: 18rem;
+  width: 25rem;
+
+  border-radius: 2rem;
+}
+.teachers-name {
+  position: relative;
+  margin-top: 3rem;
+  font-size: 3rem;
+  color: var(--dark-blue-color);
+}
+.teachers-profile {
+  font-size: 2rem;
+  color: var(--gray-text-color);
+}
+.icons-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin: 5rem;
+}
+.teachers-icon {
+  display: block;
+  height: 2.5rem;
+  width: 3rem;
+  margin: 0.2rem;
+}
+
+/* ...Courses...  */
+
+.courses {
+  margin: 20rem 0;
+  position: relative;
+  z-index: -1;
+}
+.courses-title {
+  font-size: 5rem;
+  color: var(--dark-blue-color);
+  font-family: "Vazir-Bold";
+  text-align: center;
+}
+.courses-description {
+  font-size: 3rem;
+  font-family: "Vazir-Medium";
+  text-align: center;
+  margin-bottom: 5rem;
+}
+.courses-box__container {
+  margin: 10rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.courses-box {
+  height: 24rem;
+  width: 27rem;
+  margin: 3.5rem 2rem;
+  text-align: center;
+  background: #fff;
+  border-radius: 2rem;
+  padding: 2rem;
+  cursor: pointer;
+  box-shadow: 0.3rem 0.3rem 0 0.1rem var(--primary-color),
+    0.5rem 0.5rem 0.5rem rgba(0, 0, 0, 0.3);
+}
+.courses-box__icon {
+  height: 8rem;
+  width: 8rem;
+  line-height: 8rem;
+  text-align: center;
+  color: #fff;
+  border-radius: 50%;
+  background: var(--primary-color);
+  margin: 0 auto;
+  border: 1rem solid #fff;
+  border-left: 1rem solid var(--primary-color);
+  border-right: 1rem solid var(--primary-color);
+  box-shadow: 0 0 0 1rem #fff inset;
+  font-size: 3.5rem;
+}
+.course-icon {
+  width: 100%;
+}
+.course-title {
+  position: relative;
+  margin: 1.5rem;
+  font-size: 3rem;
+  color: var(--dark-blue-color);
+}
+.course-caption {
+  font-size: 1.5rem;
+  color: var(--gray-text-color);
+  padding: 1rem 0;
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+/* ...Comments...  */
+
+.comments {
+  margin-top: 20rem;
+}
+.comments-title {
+  font-size: 5rem;
+  color: var(--dark-blue-color);
+  font-family: "Vazir-Bold";
+  text-align: center;
+  z-index: -1;
+}
+.comments-description {
+  font-size: 3rem;
+  font-family: "Vazir-Medium";
+  text-align: center;
+  margin-bottom: 5rem;
+}
+.comments-wrapper {
+  margin: 10rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.comment-box {
+  width: 30rem;
+  /* padding-bottom: 1rem; */
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.3);
+  background: #fff;
+  margin: 4rem 2rem;
+  border-radius: 2rem;
+}
+.user-img {
+  height: 9rem;
+  width: 9rem;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-top: -4.5rem;
+  border: 0.3rem solid var(--primary-color);
+}
+.user-name {
+  position: relative;
+  margin: 1.5rem;
+  font-size: 3rem;
+  color: var(--dark-blue-color);
+}
+.user-comment {
+  font-size: 1.5rem;
+  color: var(--gray-text-color);
+  padding: 1rem 0;
+  text-align: center;
+  margin-bottom: 5rem;
+}
+.icon-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.star-icon {
+  display: block;
+  height: 2.5rem;
+  width: 3rem;
+  margin: 0.2rem;
+}
+/* ...Contact Us...  */
+
+.footer {
+  background: var(--primary-color);
+  border-top-left-radius: 2rem;
+  border-top-right-radius: 2rem;
+  /* position: relative; */
+}
+
+.footer-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-basis: 50%;
+}
+.footer-logo {
+}
+.loggo-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 0;
+}
+.footer-logo_link {
+}
+.footer-logo_image {
+  display: block;
+  height: 10rem;
+  width: 10rem;
+  margin-left: 1rem;
+}
+.footer-caption {
+  font-size: 4rem;
+  color: var(--nav-menu-color);
+  font-family: "Vazir-Bold";
+  text-align: center;
+  line-height: 1;
+}
+.footer-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 0;
+}
+.footer-icon {
+  display: block;
+  height: 4.5rem;
+  width: 5rem;
+  margin: 1rem;
+}
+.footer-email {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 45rem;
+}
+.form {
+}
+.textarea {
+  width: 100%;
+  height: 10rem;
+  background-color: var(--nav-menu-color);
+  border: none;
+  border-radius: 2rem;
+  padding: 2rem;
+  margin: 2rem 0 1rem 0;
+  font-size: 1.8rem;
+  transition: 0.2s linear;
+  font-family: "Vazir-Light";
+}
+.form-input {
+  display: block;
+  height: 4rem;
+  width: 100%;
+  background-color: var(--nav-menu-color);
+  border: none;
+  border-radius: 2rem;
+  padding: 1rem;
+  font-size: 1.5rem;
+  transition: 0.2s linear;
+  font-family: "Vazir-Light";
+}
+
+.send-btn {
+  color: var(--nav-menu-color);
+  background-color: black;
+  font-size: 2rem;
+  margin: 2rem;
+  border: none;
+}
+.send-btn:hover {
+  background-color: var(--nav-menu-color);
+  color: black;
+  transition: 0.2s linear;
+}

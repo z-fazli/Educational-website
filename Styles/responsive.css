@@ -1,0 +1,138 @@
+@media(max-width:1200px){
+  .aboutUs-Wrapper{
+    flex-direction: column;
+    
+  }
+  .aboutUs{
+    margin-top: 40rem;
+  }
+  .about-us__btn{
+    margin: 8rem  0;
+  }
+  .aboutUs-banner{
+    width: 100%;
+  }
+}
+@media(max-width:992px){
+  .footer-caption{
+    font-size: 3rem;
+   }
+   .footer-logo_image{
+    width: 7rem;
+    height: 7rem;
+   }
+   .footer-wrapper{
+    flex-direction: column;
+    margin-bottom: 3rem;
+    text-align: center;
+   }
+
+}
+@media(max-width:768px){
+  .aboutUs{
+    margin-top: 70rem;
+  }
+
+
+}
+@media (max-width: 576px){
+  .header-content__title{
+    font-size:4rem ;
+    max-width: 30rem;
+  }
+  .header-conetnt__caption {
+    font-size: 1.7rem;
+  }
+  .header-box__container{
+    margin-top: 15rem;
+    position: static;
+  }
+  .banner-container{
+    display: none;
+  }
+  
+   .footer-caption{
+    font-size: 3rem;
+   }
+   .footer-logo_image{
+    width: 7rem;
+    height: 7rem;
+   }
+  .send-btn{
+    margin: 3rem 0  ;
+    
+  }
+
+
+}
+@media (max-width: 380px){
+  .course-caption{
+    display: none;
+  }
+ 
+ 
+
+}
+@media (min-width: 576px) {
+ 
+
+  .menu {
+    display: flex;
+  }
+  .nav__btn {
+    display: none;
+  }
+  .site__logo-btn {
+    display: none;
+  }
+  .site__logo-menu {
+    display: block;
+  }
+  .navbar__links {
+    display: block;
+  }
+  .menu__link {
+    font-size: small;
+  }
+  .navbar__link {
+    font-size: small;
+  }
+  .menu__item {
+    margin-right: 1.2rem;
+  }
+ .header-content__title{
+  max-width: 100%;
+  font-size: 4rem;
+ }
+ .header-box__container{
+  margin-top: 15rem;
+}
+
+  
+}
+@media (min-width: 768px) {
+  .menu__link {
+    font-size: inherit;
+  }
+  .navbar__link {
+    font-size: inherit;
+  }
+  .menu__item {
+    margin-right: 2.5rem;
+  }
+  .header-content__title{
+    font-size: 5rem;
+  }
+  .header-box__container{
+    margin-top: -5rem;
+  }
+ 
+
+
+}
+@media (min-width: 992px) {
+}
+@media (min-width: 1200px) {
+}
+@media (min-width: 1400px) {
+}
