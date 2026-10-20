@@ -4,24 +4,24 @@ A modern and responsive educational website template built using HTML, CSS, and 
 This project provides a clean and user-friendly interface that can be customized for online learning platforms,
 educational institutions, courses, and personal learning websites.
 
-✨ Features
+... Features 
 
-🎨 Clean and modern user interface
+. Clean and modern user interface
 
-📱 Responsive design for different screen sizes
+. Responsive design for different screen sizes
 
-⚡ Lightweight and fast
+. Lightweight and fast
 
-🧩 Built with vanilla HTML, CSS, and JavaScript
+. Built with vanilla HTML, CSS, and JavaScript
 
-🛠️ Easy to customize and extend
+. Easy to customize and extend
 
-🌐 No frontend frameworks required
+. No frontend frameworks required
 
-🛠️ Technologies Used
+... Technologies Used
 
-HTML5 — Website structure
+. HTML5 — Website structure
 
-CSS3 — Styling, layout, and responsive design
+. CSS3 — Styling, layout, and responsive design
 
-JavaScript — Interactive functionality
+. JavaScript — Interactive functionality
